@@ -3,7 +3,7 @@ using Grpc.Core;
 using Grpc.Core.Interceptors;
 using Microsoft.Extensions.Logging;
 
-namespace Microservices.Contracts.Grpc.Interceptors;
+namespace Contracts.Shared.Grpc.Interceptors;
  
 /// <summary>
 /// Interceptor responsible for handling exceptions during gRPC calls and converting

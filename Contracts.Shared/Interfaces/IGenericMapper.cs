@@ -1,4 +1,4 @@
-﻿namespace Microservices.Contracts.Interfaces;
+﻿namespace Contracts.Shared.Interfaces;
 
 /// <summary>
 /// Defines a generic contract for mapping an input object of type <typeparamref name="TRequest"/> 

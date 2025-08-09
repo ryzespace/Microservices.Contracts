@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Contracts", "Microservices.Contracts.csproj", "{33B101FB-8E3A-490C-ACD1-28DD500C159A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts.MarketplaceIntegration", "Contracts.MarketplaceIntegration\Contracts.MarketplaceIntegration.csproj", "{A7FE485B-8CD1-4C7F-B752-8F29C1FA48EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts.Shared", "Contracts.Shared\Contracts.Shared.csproj", "{C93D4F19-049E-4FAD-8972-1C099051E71E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,13 @@ Global
 		{33B101FB-8E3A-490C-ACD1-28DD500C159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33B101FB-8E3A-490C-ACD1-28DD500C159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33B101FB-8E3A-490C-ACD1-28DD500C159A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7FE485B-8CD1-4C7F-B752-8F29C1FA48EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FE485B-8CD1-4C7F-B752-8F29C1FA48EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FE485B-8CD1-4C7F-B752-8F29C1FA48EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FE485B-8CD1-4C7F-B752-8F29C1FA48EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93D4F19-049E-4FAD-8972-1C099051E71E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93D4F19-049E-4FAD-8972-1C099051E71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93D4F19-049E-4FAD-8972-1C099051E71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93D4F19-049E-4FAD-8972-1C099051E71E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

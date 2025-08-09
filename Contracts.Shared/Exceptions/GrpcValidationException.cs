@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
-using Microservices.Contracts.Grpc.Interceptors;
+using Contracts.Shared.Grpc.Interceptors;
 
-namespace Microservices.Contracts.Exceptions;
+namespace Contracts.Shared.Exceptions;
 
 /// <summary>
 /// Represents a gRPC exception indicating a validation failure.

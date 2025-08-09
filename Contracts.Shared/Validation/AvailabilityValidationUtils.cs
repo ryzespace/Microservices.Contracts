@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Microservices.Contracts.Validation;
+namespace Contracts.Shared.Validation;
 
 /// <summary>
 /// Utility methods for validating availability slot data.

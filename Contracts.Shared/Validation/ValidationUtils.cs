@@ -1,4 +1,4 @@
-﻿namespace Microservices.Contracts.Validation;
+﻿namespace Contracts.Shared.Validation;
 
 /// <summary>
 /// Utility methods for common validation logic.

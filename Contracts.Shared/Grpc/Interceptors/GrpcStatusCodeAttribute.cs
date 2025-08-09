@@ -1,6 +1,6 @@
 ﻿using Grpc.Core;
 
-namespace Microservices.Contracts.Grpc.Interceptors;
+namespace Contracts.Shared.Grpc.Interceptors;
 
 /// <summary>
 /// An attribute used to associate a gRPC status code with a specific exception class.
