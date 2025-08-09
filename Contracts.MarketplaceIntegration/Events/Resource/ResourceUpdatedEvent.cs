@@ -1,6 +1,6 @@
 ﻿using Contracts.MarketplaceIntegration.DTO.ResourcesConfig;
 
-namespace Contracts.MarketplaceIntegration.Events;
+namespace Contracts.MarketplaceIntegration.Events.Resource;
 
 /// <summary>
 /// Event representing an update to an existing resource's configuration.

@@ -170,11 +170,16 @@
   },
   "active": "2baa8690a637ed98",
   "lastOpenFiles": [
-    "Contracts.MarketplaceIntegration/Events/ResourceUpdatedEvent.cs",
-    "Contracts.MarketplaceIntegration/Events/ResourceDeleteEvent.cs",
+    "Contracts.MarketplaceIntegration/Events/Notification/NotificationCreatedEvent.cs~",
+    "Contracts.MarketplaceIntegration/Events/Notification/NotificationReadEvent.cs~",
+    "Contracts.MarketplaceIntegration/Events/Notification/NotificationDeletedEvent.cs~",
+    "Contracts.MarketplaceIntegration/Events/Notification/NotificationDeletedEvent.cs",
+    "Contracts.MarketplaceIntegration/Events/Notification/NotificationReadEvent.cs",
     "Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj~",
-    "Contracts.MarketplaceIntegration/Events/RentalCreatedEvent.cs",
-    "README.md~",
-    "Contracts.MarketplaceIntegration/Events"
+    "Contracts.MarketplaceIntegration/Events/Notification/NotificationCreatedEvent.cs",
+    "Contracts.MarketplaceIntegration/Events/Notification",
+    "Contracts.MarketplaceIntegration/DTO/NotificationDto.cs~",
+    "Contracts.MarketplaceIntegration/DTO/NotificationDto.cs",
+    "Contracts.MarketplaceIntegration/DTO/AvailabilitySlotDto.cs~"
   ]
 }

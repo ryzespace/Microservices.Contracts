@@ -1,4 +1,4 @@
-﻿namespace Contracts.MarketplaceIntegration.Events;
+﻿namespace Contracts.MarketplaceIntegration.Events.Resource;
 
 /// <summary>
 /// Represents an event signaling the deletion of a resource.

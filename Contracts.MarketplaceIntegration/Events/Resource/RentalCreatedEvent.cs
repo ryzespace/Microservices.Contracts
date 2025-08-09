@@ -2,7 +2,7 @@
 
 using Contracts.MarketplaceIntegration.DTO.ResourcesConfig;
 
-namespace Contracts.MarketplaceIntegration.Events;
+namespace Contracts.MarketplaceIntegration.Events.Resource;
 
 /// <summary>
 /// Event emitted when a seller creates a new rental.
