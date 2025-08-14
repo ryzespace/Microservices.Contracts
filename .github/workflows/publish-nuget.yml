@@ -28,10 +28,10 @@ jobs:
             https://nuget.pkg.github.com/sean6224/index.json
 
       - name: Pack Contracts.Shared
-        run: dotnet pack src/Contracts.Shared/Contracts.Shared.csproj --configuration Release
-    
+        run: dotnet pack Contracts.Shared/Contracts.Shared.csproj --configuration Release
+
       - name: Pack MarketplaceIntegration
-        run: dotnet pack src/Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj --configuration Release
+        run: dotnet pack Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj --configuration Release
 
       - name: Push to GitHub Packages
-        run: dotnet nuget push "**/*.nupkg" --source github --skip-duplicate
+        run: dotnet nuget push "**/bin/Release/*.nupkg" --source github --skip-duplicate
