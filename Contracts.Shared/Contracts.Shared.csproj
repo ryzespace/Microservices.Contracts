@@ -5,6 +5,14 @@
         <LangVersion>preview</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PackageId>Rentix.Contracts.Shared</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Zarin</Authors>
+        <Company>Rentix</Company>
+        <Description>Contracts for shared integration</Description>
+        <RepositoryUrl>https://github.com/rentixs/Microservices.Contracts</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>

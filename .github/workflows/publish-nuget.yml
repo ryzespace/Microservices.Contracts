@@ -1,0 +1,37 @@
+﻿name: Publish NuGet Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Authenticate with GitHub Packages
+        run: |
+          dotnet nuget add source \
+            --username ${{ github.actor }} \
+            --password ${{ secrets.GH_PACKAGES_TOKEN }} \
+            --store-password-in-clear-text \
+            --name github \
+            https://nuget.pkg.github.com/sean6224/index.json
+
+      - name: Pack Contracts.Shared
+        run: dotnet pack src/Contracts.Shared/Contracts.Shared.csproj --configuration Release
+    
+      - name: Pack MarketplaceIntegration
+        run: dotnet pack src/Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj --configuration Release
+
+      - name: Push to GitHub Packages
+        run: dotnet nuget push "**/*.nupkg" --source github --skip-duplicate
