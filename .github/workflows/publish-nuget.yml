@@ -1,5 +1,8 @@
 ﻿name: Publish NuGet Package
 
+env:
+  DOTNET_VERSION: '10.0.x'
+
 on:
   push:
     tags:
@@ -16,7 +19,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Authenticate with GitHub Packages
         run: |
