@@ -28,7 +28,7 @@ jobs:
             --password ${{ secrets.GH_PACKAGES_TOKEN }} \
             --store-password-in-clear-text \
             --name github \
-            https://nuget.pkg.github.com/sean6224/index.json
+            https://nuget.pkg.github.com/rentixs/index.json
 
       - name: Pack Contracts.Shared
         run: dotnet pack Contracts.Shared/Contracts.Shared.csproj --configuration Release
