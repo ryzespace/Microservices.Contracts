@@ -37,14 +37,10 @@ jobs:
           echo "PACKAGE_VERSION=$PACKAGE_VERSION" >> $GITHUB_ENV
 
       - name: Pack Contracts.Shared
-        run: dotnet pack Contracts.Shared/Contracts.Shared.csproj \
-          --configuration Release \
-          /p:PackageVersion=$PACKAGE_VERSION
-
+        run: dotnet pack Contracts.Shared/Contracts.Shared.csproj --configuration Release /p:PackageVersion=$PACKAGE_VERSION
+    
       - name: Pack MarketplaceIntegration
-        run: dotnet pack Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj \
-          --configuration Release \
-          /p:PackageVersion=$PACKAGE_VERSION
+        run: dotnet pack Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj --configuration Release /p:PackageVersion=$PACKAGE_VERSION
 
       - name: Push to GitHub Packages
         run: dotnet nuget push "**/bin/Release/*.nupkg" --source github --skip-duplicate
