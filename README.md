@@ -65,7 +65,6 @@ dotnet add package Rentix.Contracts
 |-----------|---------|------------|
 | `Contracts.Shared.Exceptions` | Shared exception contracts | Custom exceptions across services |
 | `Contracts.Shared.Grpc` | gRPC service contracts | High-performance inter-service communication |
-| `Contracts.Shared.Interfaces` | Common interface definitions | Service contracts and abstractions |
 | `Contracts.Shared.Validation` | Validation contracts | Shared validation logic and rules |
 
 ---
