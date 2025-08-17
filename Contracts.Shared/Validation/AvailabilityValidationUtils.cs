@@ -18,7 +18,7 @@ public static class AvailabilityValidationUtils
                && Array.Exists(AllowedDays, d => string.Equals(d, day, StringComparison.OrdinalIgnoreCase));
     }
 
-    private static bool IsValidTime(string time)
+    public static bool IsValidTime(string time)
     {
         return !string.IsNullOrWhiteSpace(time)
                && (TimeSpan.TryParseExact(time, "hh\\:mm", CultureInfo.InvariantCulture, out _)
