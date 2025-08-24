@@ -12,6 +12,8 @@
 /// </remarks>
 public class AvailabilitySlotDto
 {
+    public string? SlotId { get; set; }  
+    
     /// <summary>
     /// Day of the week (e.g. "MON", "TUE", etc.).
     /// </summary>

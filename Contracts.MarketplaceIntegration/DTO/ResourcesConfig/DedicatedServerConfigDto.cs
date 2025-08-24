@@ -21,6 +21,12 @@ public class DedicatedServerConfigDto
 {
     public DedicatedHardwareDto? Hardware { get; set; }
     public LocationDto? Location { get; set; }
+    
+    /// <summary>
+    /// Network bandwidth configuration of the VM.
+    /// </summary>
+    public NetworkDto? Network { get; set; }
+    
     public List<string>? Tags { get; set; }
     public DateTime? CreatedAt { get; set; }
     public DateTime? LastRentedAt { get; set; }

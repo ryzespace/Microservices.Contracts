@@ -1,6 +1,4 @@
-﻿
-
-using Contracts.MarketplaceIntegration.DTO.ResourcesConfig;
+﻿using Contracts.MarketplaceIntegration.DTO.ResourcesConfig;
 
 namespace Contracts.MarketplaceIntegration.Events.Resource;
 
@@ -20,7 +18,12 @@ public class RentalCreatedEvent
     /// Gets or sets the unique identifier of the seller.
     /// </summary>
     public Guid SellerId { get; set; }
-
+    
+    /// <summary>
+    /// Gets or sets the unique identifier of the resource.
+    /// </summary>
+    public Guid ResourceId { get; set; }
+    
     /// <summary>
     /// Gets or sets the resource configuration details associated with the rental.
     /// </summary>
