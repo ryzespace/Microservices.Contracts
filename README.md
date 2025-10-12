@@ -1,127 +1,155 @@
 <div align="center">
 
-# Rentix.Contracts
+# RyzeSpace.Contracts
 
-![Rentix Logo](https://img.shields.io/badge/Rentix-Contracts-blue?style=for-the-badge)
-[![NuGet](https://img.shields.io/badge/NuGet-Package-green?style=for-the-badge)](https://nuget.org)
-[![License](https://img.shields.io/badge/License-MIT%20%2B%20Commons%20Clause-red?style=for-the-badge)](LICENSE)
+### The foundation of decentralized computational resource sharing
 
-**Centralized repository of shared contracts for Rentix microservices ecosystem**
-
-*The single source of truth for DTOs, events, and integration contracts powering the computational resource sharing platform.*
+[![NuGet](https://img.shields.io/nuget/v/RyzeSpace.Contracts?style=flat-square&logo=nuget&color=004880)](https://nuget.org)
+[![License](https://img.shields.io/badge/license-MIT%20%2B%20Commons%20Clause-7c3aed?style=flat-square)](LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com)
 </div>
 
+![banners](banners.png)
 ---
 
-## 📦 Purpose
+## Overview
 
-This repository contains **shared contracts** that define the communication boundaries between Rentix microservices.  
-It ensures **consistency**, **type-safety**, and **version control** for cross-service data exchange.
-
-### 🔑 Key Responsibilities
-
-- Hosting **integration event contracts** (e.g., `resource.created`, `rental.updated`)
-- Defining **shared DTOs** for inter-service requests and responses
-- Maintaining **clear namespaces** for service-to-service communication
-- Providing a **NuGet package** for easy consumption by all services
-
----
-
-## 🤝 Contributing
-
-### Development Workflow
-
-1. **Fork** the repository
-2. **Create** feature branch (`git checkout -b feature/new-contract`)
-3. **Add** your contracts following naming conventions
-4. **Test** contract serialization/deserialization
-5. **Update** version in `.csproj` following semantic versioning
-6. **Submit** pull request with detailed description
-
-## 🚀 Getting Started
-
-### Installation
+RyzeSpace.Contracts serve as the **single source of truth** for all service-to-service communication in the RyzeSpace ecosystem. This centralized contract repository ensures type-safe, versioned, and consistent data exchange across our distributed microservices architecture.
 
 ```bash
-# Install via NuGet Package Manager
-Install-Package Rentix.Contracts
-
-# Or via .NET CLI
-dotnet add package Rentix.Contracts
+dotnet add package RyzeSpace.Contracts
 ```
 
+## Why Contracts Matter
 
-## 📋 Contract Catalog
+In a microservices ecosystem, contracts are the glue that holds everything together. They provide:
 
-### 🔄 Integration Events
+- **Type Safety** — Compile-time validation of inter-service communication
+- **Version Control** — Clear evolution path for API changes
+- **Documentation** — Self-documenting service interfaces
+- **Consistency** — Unified data structures across the platform
 
-| Namespace                                 | Purpose                          | Key Events |
-| ----------------------------------------- | -------------------------------- | ---------- |
-| `Contracts.MarketplaceIntegration.Events` | Cross-service integration events | `Soon`     |
-
-### 📊 Shared Contracts
-
-| Namespace | Purpose | Components |
-|-----------|---------|------------|
-| `Contracts.Shared.Exceptions` | Shared exception contracts | Custom exceptions across services |
-| `Contracts.Shared.Grpc` | gRPC service contracts | High-performance inter-service communication |
-| `Contracts.Shared.Validation` | Validation contracts | Shared validation logic and rules |
-
----
-
-## 🔐 License and Usage
-
-### MIT License + Commons Clause
+## Architecture
 
 ```
-MIT License with Commons Clause
-
-Copyright (c) 2025 Rentix Platform Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The Software shall be used for Good, not Evil.
-
-⚠️  COMMERCIAL USE RESTRICTION:
-The Software may not be used for commercial purposes without explicit 
-written permission from the copyright holders.
+RyzeSpace.Contracts/
+│
+├── Integration Events/          # Cross-service event contracts
+│   └── MarketplaceIntegration/  # Marketplace domain events
+│
+└── Shared/                      # Common contracts
+    ├── Exceptions/              # Platform-wide exception types
+    ├── Grpc/                    # gRPC service definitions
+    └── Validation/              # Validation rules & attributes
 ```
 
-### 💡What Does This Mean?
+## Contract Categories
 
-| Allowed ✅                 | Prohibited ❌          |
-|---------------------------|-----------------------|
-| Personal use              | Commercial products   |
-| Educational projects      | SaaS offerings        |
-| Scientific research       | Software resale       |
-| Open source contributions | White-label solutions |
-| Learning and experiments  | Consulting services   |
+### Integration Events
+
+Event-driven communication contracts for asynchronous service integration.
+
+```csharp
+// Example: Resource lifecycle events
+namespace Contracts.MarketplaceIntegration.Events.Resource;
+
+public class RentalCreatedEvent
+{
+    public Guid SellerId { get; set; }
+    public Guid ResourceId { get; set; }
+    public ResourceConfigurationDto Configuration { get; set; }
+    public DateTime CreatedAt { get; set; }
+}
+```
+
+### Shared Contracts
+
+Reusable components for common functionality across services.
+
+| Category | Purpose | Use Cases |
+|----------|---------|-----------|
+| **Exceptions** | Standardized error handling | Domain errors, validation failures, infrastructure issues |
+| **gRPC** | High-performance RPC | Real-time resource allocation, health checks |
+| **Validation** | Business rule enforcement | Input validation, constraint checking |
+
+## Installation
+
+### Package Manager Console
+```powershell
+Install-Package RyzeSpace.Contracts
+```
+
+### .NET CLI
+```bash
+dotnet add package RyzeSpace.Contracts
+```
+
+### PackageReference
+```xml
+<PackageReference Include="RyzeSpace.Contracts" Version="1.0.0" />
+```
+
+## Contributing
+
+We welcome contributions that improve contract clarity, expand integration patterns, or enhance type safety.
+
+### Development Guidelines
+
+1. **Branch Strategy** — Create feature branches from `main`
+   ```bash
+   git checkout -b feature/payment-events
+   ```
+
+2. **Naming Conventions**
+    - Events: `{Entity}{Action}Event` (e.g., `ResourceCreatedEvent`)
+    - DTOs: `{Purpose}Dto` (e.g., `ResourceAllocationDto`)
+    - Namespaces: Follow domain structure
+
+3. **Versioning** — Use semantic versioning (MAJOR.MINOR.PATCH)
+    - MAJOR: Breaking changes
+    - MINOR: New contracts (backward compatible)
+    - PATCH: Bug fixes, documentation
+
+4. **Pull Request** — Provide clear descriptions of changes and impact
+
+## License
+
+**MIT License + Commons Clause**
+
+The RyzeSpace.Contracts library is open source for personal, educational, and research purposes. Commercial use requires explicit permission.
+
+### Permitted Use ✓
+
+- Personal projects and learning
+- Academic research and education
+- Open source contributions
+- Non-commercial experimentation
+
+### Restricted Use ✗
+
+- Commercial products and services
+- SaaS platform offerings
+- Software resale or licensing
+- Consulting services without approval
+
+See [LICENSE](LICENSE) for complete terms.
 
 ---
 
 <div align="center">
 
-## 🌟 The Rentix Platform
+### Part of the RyzeSpace Ecosystem
 
-**Democratizing computational resources through decentralized sharing**
+**Democratizing access to computational resources through decentralized sharing**
 
-*From your spare laptop to enterprise-grade servers - every resource has value in the Rentix ecosystem.*
+*Every idle GPU, every spare CPU cycle — unlocking potential in the RyzeSpace network*
 
----
+<br/>
 
-**🚀 Building the future of computational resource sharing, one contract at a time!**
+**[Documentation](https://docs.ryzespace.com)** • **[Platform](https://ryzespace.com)** • **[Community](https://discord.gg/JsQx8cQ5yp)**
 
-📦 *Clean contracts are the foundation of scalable microservices architecture.*
+<br/>
 
-*Made with ❤️ by the Rentix Team*
-
----
-
-[⬆️ Back to Top](#rentixcontracts)
+<sub>Built with precision by the RyzeSpace team</sub>
 
 </div>

@@ -28,12 +28,12 @@ jobs:
             --password ${{ secrets.GH_PACKAGES_TOKEN }} \
             --store-password-in-clear-text \
             --name github \
-            https://nuget.pkg.github.com/rentixs/index.json
+            https://nuget.pkg.github.com/ryzespace/index.json
 
       - name: Set package version from tag
         run: |
-          TAG_NAME=${GITHUB_REF#refs/tags/}       # e.g. v1.0.1
-          PACKAGE_VERSION=${TAG_NAME#v}           # removes leading 'v', result: 1.0.1
+          TAG_NAME=${GITHUB_REF#refs/tags/} # e.g. v1.0.1
+          PACKAGE_VERSION=${TAG_NAME#v}
           echo "PACKAGE_VERSION=$PACKAGE_VERSION" >> $GITHUB_ENV
 
       - name: Pack Contracts.Shared

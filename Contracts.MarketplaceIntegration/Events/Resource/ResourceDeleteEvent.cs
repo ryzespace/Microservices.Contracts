@@ -1,4 +1,6 @@
-﻿namespace Contracts.MarketplaceIntegration.Events.Resource;
+﻿using Contracts.MarketplaceIntegration.Enum;
+
+namespace Contracts.MarketplaceIntegration.Events.Resource;
 
 /// <summary>
 /// Represents an event signaling the deletion of a resource.
@@ -16,6 +18,8 @@ public class ResourceDeleteEvent
     /// </summary>
     public Guid ResourceId { get; set; }
 
+    public ResourceType ResourceType { get; set; }
+    
     /// <summary>
     /// Gets or sets the date and time when the deletion occurred or was requested.
     /// </summary>
