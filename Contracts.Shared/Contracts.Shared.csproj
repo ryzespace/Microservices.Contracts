@@ -7,9 +7,9 @@
         <Nullable>enable</Nullable>
 
         <PackageId>Rentix.Contracts.Shared</PackageId>
-        <Version>1.0.0</Version>
-        <Authors>Zarin</Authors>
-        <Company>Rentix</Company>
+        <Version>1.0.1</Version>
+        <Authors>RyzeSpace</Authors>
+        <Company>RyzeSpace</Company>
         <Description>Contracts for shared integration</Description>
         <RepositoryUrl>https://github.com/rentixs/Microservices.Contracts</RepositoryUrl>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -18,7 +18,9 @@
     <ItemGroup>
       <PackageReference Include="FluentValidation" Version="12.0.0" />
       <PackageReference Include="Grpc.Core" Version="2.46.6" />
+      <PackageReference Include="Mapster" Version="10.0.0-pre01" />
       <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0-preview.6.25358.103" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     </ItemGroup>
 
 </Project>

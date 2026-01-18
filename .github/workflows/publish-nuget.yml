@@ -38,8 +38,8 @@ jobs:
 
       - name: Pack Contracts.Shared
         run: dotnet pack Contracts.Shared/Contracts.Shared.csproj --configuration Release /p:PackageVersion=$PACKAGE_VERSION
-    
-      - name: Pack MarketplaceIntegration
+
+      - name: Pack Contracts.MarketplaceIntegration
         run: dotnet pack Contracts.MarketplaceIntegration/Contracts.MarketplaceIntegration.csproj --configuration Release /p:PackageVersion=$PACKAGE_VERSION
 
       - name: Push to GitHub Packages

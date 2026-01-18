@@ -9,7 +9,6 @@
 [![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com)
 </div>
 
-![banners](banners.png)
 ---
 
 ## Overview
@@ -50,7 +49,7 @@ RyzeSpace.Contracts/
 Event-driven communication contracts for asynchronous service integration.
 
 ```csharp
-// Example: Resource lifecycle events
+// Example: Resource lifecycle evets
 namespace Contracts.MarketplaceIntegration.Events.Resource;
 
 public class RentalCreatedEvent
